@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Девочка с головой волка — Диалог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bg-music" src="audio/music.mp3" loop prefetch></audio>
+
+    <div id="flash-overlay"></div>
+
+    <div class="container">
+        <div class="background-container">
+            
+            <img class="background-image" src="background.jpg" alt="Фон">
+            
+            <div class="character">
+               <img id="olya-sprite" src="character.png" alt="Оля">
+            </div>
+            
+            <div class="dialogue-window">
+                <div class="dialogue-content">
+                    <div class="text-area">
+                        <p id="dialogue-text">Оля внимательно на тебя смотрит...</p>
+                    </div>
+                    <button id="next-button">▶</button>
+                </div>
+            </div>
+
+            <div class="choice-buttons" style="display: none;">
+                <button onclick="showDialogue(1)">Как тебя зовут?</button>
+                <button onclick="showDialogue(2)">Почему у тебя волчья голова?</button>
+                <button onclick="showDialogue(3)">У тебя есть родители?</button>
+                <button id="secret-promo-btn" style="display: none; border: 1px solid gold; color: gold;" onclick="showDialogue(4)">✨ О спектакле</button>
+            </div>
+
+        </div>
+    </div>
+
+    <button id="mute-btn" class="mute-toggle">🔊</button>
+
+<a href="https://quicktickets.ru/nahodka-teatr-kukol-anisimova" target="_blank" id="site-link" class="top-banner">
+    🎟️ Купить билеты на спектакль
+</a>
+    
+    <script src="script.js"></script>
+</body>
+</html>
